@@ -1,18 +1,18 @@
 const mongoose = require('mongoose');
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 
 const videoSchema = new Schema({
-    problemId: {
-        type: Schema.Types.ObjectId,
-        ref: 'problem',
-        required: true
-    },
-    userId: {
+  problemId: {
+    type: Schema.Types.ObjectId,
+    ref: 'problem',
+    required: true
+  },
+  userId: {
     type: Schema.Types.ObjectId,
     ref: 'user',
     required: true,
-   },
-   cloudinaryPublicId: {
+  },
+  cloudinaryPublicId: {
     type: String,
     required: true,
     unique: true
@@ -28,12 +28,12 @@ const videoSchema = new Schema({
     type: Number,
     required: true
   },
-},{
-    timestamps:true
+}, {
+  timestamps: true
 });
 
 
 
-const SolutionVideo = mongoose.model("solutionVideo",videoSchema);
+const SolutionVideo = mongoose.model("solutionVideo", videoSchema);
 
 module.exports = SolutionVideo;

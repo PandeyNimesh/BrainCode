@@ -16,7 +16,6 @@ const getLanguageById = (lang)=>{
 
 const submitBatch = async (submissions)=>{
 
-
 const options = {
   method: 'POST',
   url: 'https://judge0-ce.p.rapidapi.com/submissions/batch',
@@ -93,7 +92,6 @@ async function fetchData() {
   
   await waiting(1000);
 }
-
 
 
 }

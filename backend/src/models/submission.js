@@ -42,18 +42,18 @@ const submissionSchema = new Schema({
     type: Number,
     default: 0
   },
-  testCasesTotal: {  
+  testCasesTotal: {
     type: Number,
     default: 0
   }
-}, { 
+}, {
   timestamps: true
 });
 
 
-submissionSchema.index({userId:1 , problemId:1});
+submissionSchema.index({ userId: 1, problemId: 1 });
 
 
-const Submission = mongoose.model('submission',submissionSchema);
+const Submission = mongoose.model('submission', submissionSchema);
 
 module.exports = Submission;
