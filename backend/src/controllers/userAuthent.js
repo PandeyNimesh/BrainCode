@@ -10,9 +10,8 @@ const register = async (req, res) => {
 
     try {
         // validate the data;
-        console.log("Registration request body:", req.body);
-
         validate(req.body);
+        
         const { firstName, email, password } = req.body;
 
         // Check if user already exists
@@ -38,7 +37,7 @@ const register = async (req, res) => {
         res.cookie('token', token, { maxAge: 60 * 60 * 1000 });
         res.status(201).json({
             user: reply,
-            message: "Loggin Successfully"
+            message: "Register Successfully"
         })
     }
     catch (err) {
